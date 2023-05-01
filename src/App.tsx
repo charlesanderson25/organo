@@ -7,7 +7,9 @@ function App() {
     <>
       <div className="App">
         <Banner />
-        <InputField />
+        <InputField label="Nome" />
+        <InputField label="Cargo" />
+        <InputField label="Imagem" />
       </div>
     </>
   );

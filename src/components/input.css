@@ -1,12 +1,15 @@
 .input {
-  background: #fff;
-  mix-blend-mode: normal;
-  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
-  border-radius: 0px;
+  margin: 24px 0;
+}
 
-  position: absolute;
-  width: 930px;
-  height: 80px;
-  left: 255px;
-  top: 786px;
+.input label {
+  display: block;
+  padding-bottom: 8px;
+  font-size: 24px;
+}
+
+.input input {
+  background: #fff;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
+  width: 100%;
 }

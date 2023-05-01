@@ -1,10 +1,14 @@
 import "./input.css";
 
-const InputField = () => {
+interface InputFieldProps {
+  label: string;
+}
+
+const InputField = ({ label }: InputFieldProps) => {
   return (
     <section className="input">
-      <label>Nome</label>
-      <input type="text" />
+      <label>{label}</label>
+      <input type="text" placeholder="Digite Seu Nome" />
     </section>
   );
 };
