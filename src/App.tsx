@@ -7,9 +7,9 @@ function App() {
     <>
       <div className="App">
         <Banner />
-        <InputField label="Nome" />
-        <InputField label="Cargo" />
-        <InputField label="Imagem" />
+        <InputField label="Nome" placeholder="Digite Seu Nome" />
+        <InputField label="Cargo" placeholder="Informe Seu Cargo"/>
+        <InputField label="Imagem" placeholder="Faça o upload de sua imagem" />
       </div>
     </>
   );
