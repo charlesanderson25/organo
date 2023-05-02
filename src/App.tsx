@@ -9,7 +9,7 @@ function App() {
         <Banner />
         <InputField label="Nome" placeholder="Digite Seu Nome" />
         <InputField label="Cargo" placeholder="Informe Seu Cargo"/>
-        <InputField label="Imagem" placeholder="Faça o upload de sua imagem" />
+        <InputField label="Imagem" placeholder="Informe o Endereço da Imagem" />
       </div>
     </>
   );
