@@ -7,10 +7,10 @@ interface InputFieldProps {
 
 const InputField = ({ label, placeholder }: InputFieldProps) => {
   return (
-    <section className="input">
+    <div className="input">
       <label>{label}</label>
       <input type="text" placeholder={placeholder} />
-    </section>
+    </div>
   );
 };
 
