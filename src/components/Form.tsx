@@ -1,12 +1,15 @@
 import InputField from "./Input";
+import "./form.css";
 
 const FormOrgano = () => {
     return (
-        <div>
-            <h2>Preencha os dados para criar o card do colaborador</h2>
-            <InputField label="Nome" placeholder="Digite Seu Nome" />
-            <InputField label="Cargo" placeholder="Informe Seu Cargo"/>
-            <InputField label="Imagem" placeholder="Informe o Endereço da Imagem" />
+        <div className="form-container">
+            <form id="form">
+                <h2>Preencha os dados para criar o card do colaborador</h2>
+                <InputField label="Nome" placeholder="Digite Seu Nome" />
+                <InputField label="Cargo" placeholder="Informe Seu Cargo"/>
+                <InputField label="Imagem" placeholder="Informe o Endereço da Imagem" />
+            </form>
         </div>
     )
 }

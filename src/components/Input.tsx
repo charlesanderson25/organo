@@ -7,9 +7,9 @@ interface InputFieldProps {
 
 const InputField = ({ label, placeholder }: InputFieldProps) => {
   return (
-    <div className="input">
+    <div className="input-div">
       <label>{label}</label>
-      <input type="text" placeholder={placeholder} />
+      <input id="input" type="text" placeholder={placeholder} />
     </div>
   );
 };

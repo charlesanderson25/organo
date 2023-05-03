@@ -1,14 +1,14 @@
-.input {
+.input-div {
   margin: 24px 0;
 }
 
-.input label {
+.input-div label {
   display: block;
   padding-bottom: 8px;
   font-size: 24px;
 }
 
-.input input {
+.input-div input {
   background: #fff;
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
   width: 100%;
