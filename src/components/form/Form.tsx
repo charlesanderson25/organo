@@ -1,4 +1,4 @@
-import InputField from "./Input";
+import InputField from "../input/Input";
 import "./form.css";
 
 const FormOrgano = () => {

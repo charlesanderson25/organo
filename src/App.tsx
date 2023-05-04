@@ -1,6 +1,6 @@
 import "./App.css";
 import Banner from "./components/banner/Banner";
-import  FormOrgano from "./components/Form";
+import  FormOrgano from "./components/form/Form";
 
 
 function App() {
