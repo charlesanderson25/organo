@@ -10,6 +10,7 @@ const InputField = ({ label, placeholder }: InputFieldProps) => {
     <div className="input-div">
       <label className="block my-4 text-2xl ">{label}</label>
       <input
+        required
         className="bg-white shadow-md w-full py-3 px-1"
         id="input"
         type="text"
