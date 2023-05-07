@@ -1,4 +1,4 @@
-import { ChangeEvent } from "react";
+import { ChangeEvent, useState } from "react";
 import "./input.css";
 
 interface InputFieldProps {
@@ -8,10 +8,12 @@ interface InputFieldProps {
 }
 
 const InputField = ({ label, placeholder, required }: InputFieldProps) => {
-  let valueCaptured = "";
+  const [valueCaptured, setValueCaptured] = useState("");
+
+  // let valueCaptured = "";
 
   const catchValue = (eventoCaptura: ChangeEvent<HTMLInputElement>) => {
-    valueCaptured = eventoCaptura.target.value;
+    setValueCaptured(eventoCaptura.target.value);
     console.log(valueCaptured);
   };
 
