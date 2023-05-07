@@ -4,7 +4,7 @@ interface ButtonProps {
 
 const Button = ({ nameButton }: ButtonProps) => {
     return (
-        <button className="bg-defaultBlue">{nameButton}</button>
+        <button className="bg-defaultBlue hover:text-hoverButton rounded-lg font-bold text-lg p-7 border-none cursor-pointer text-white">{nameButton}</button>
     )
 }
 
