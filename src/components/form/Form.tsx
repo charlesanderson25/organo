@@ -1,7 +1,11 @@
+import DropDown from "../dropDown/DropDown";
 import InputField from "../input/Input";
 import "./form.css";
 
 const FormOrgano = () => {
+  
+  const equipe = ['ECI', 'Gestão de Numerário', 'Fiscalização'];
+
   return (
     <section className="my-20 relative min-h-screen">
       <div className="form-container absolute inset-x-1/4">
@@ -15,6 +19,7 @@ const FormOrgano = () => {
             label="Imagem"
             placeholder="Informe o Endereço da Imagem"
           />
+          <DropDown item={equipe} label="Equipe"/>
         </form>
       </div>
     </section>
