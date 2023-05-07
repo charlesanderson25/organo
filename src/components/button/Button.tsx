@@ -1,10 +1,10 @@
 interface ButtonProps {
-    nameButton: string;
+    children: React.ReactNode;
 }
 
-const Button = ({ nameButton }: ButtonProps) => {
+const Button = ({ children }: ButtonProps) => {
     return (
-        <button className="bg-defaultBlue hover:text-hoverButton rounded-lg font-bold text-lg p-7 border-none cursor-pointer text-white">{nameButton}</button>
+        <button className="bg-defaultBlue hover:text-hoverButton rounded-lg font-bold text-lg p-7 border-none cursor-pointer text-white">{children}</button>
     )
 }
 
