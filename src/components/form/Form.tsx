@@ -22,9 +22,18 @@ const FormOrgano = () => {
           <h2 className="font-bold text-2xl">
             Preencha os dados para criar o card do colaborador
           </h2>
-          <InputField label="Nome" placeholder="Digite Seu Nome" />
-          <InputField label="Cargo" placeholder="Informe Seu Cargo" />
           <InputField
+            required={true}
+            label="Nome"
+            placeholder="Digite Seu Nome"
+          />
+          <InputField
+            required={true}
+            label="Cargo"
+            placeholder="Informe Seu Cargo"
+          />
+          <InputField
+            required={true}
             label="Imagem"
             placeholder="Informe o Endereço da Imagem"
           />

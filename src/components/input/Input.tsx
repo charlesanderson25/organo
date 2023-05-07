@@ -3,9 +3,10 @@ import "./input.css";
 interface InputFieldProps {
   label: string;
   placeholder: string;
+  required: true;
 }
 
-const InputField = ({ label, placeholder }: InputFieldProps) => {
+const InputField = ({ label, placeholder, required }: InputFieldProps) => {
   return (
     <div className="input-div">
       <label className="block my-4 text-2xl ">{label}</label>
