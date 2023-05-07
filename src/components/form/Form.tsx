@@ -1,3 +1,4 @@
+import Button from "../button/Button";
 import DropDown from "../dropDown/DropDown";
 import InputField from "../input/Input";
 import "./form.css";
@@ -20,6 +21,7 @@ const FormOrgano = () => {
             placeholder="Informe o Endereço da Imagem"
           />
           <DropDown item={equipe} label="Equipe"/>
+          <Button nameButton="Criar Card" />
         </form>
       </div>
     </section>
