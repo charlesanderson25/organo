@@ -1,8 +1,16 @@
+import { useState } from "react";
 import "./App.css";
 import Banner from "./components/banner/Banner";
 import FormOrgano from "./components/form/Form";
 
 function App() {
+
+  // const [colaboradores, setColaboradores] = useState([]);
+
+  // const incluirColaborador = (colaborador) => {
+  //   console.log(colaborador)
+  // }
+
   return (
     <>
       <div className="App">
