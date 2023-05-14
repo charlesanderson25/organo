@@ -5,26 +5,25 @@ import FormOrgano from "./components/form/Form";
 import Team from "./components/team/team";
 
 function App() {
-
   const times = [
     {
-      nome: 'ECI',
-      corPrimaria: '#E06B69',
-      corSecundaria: '#FDE7E8'
+      nome: "ECI",
+      corPrimaria: "#E06B69",
+      corSecundaria: "#FDE7E8",
     },
 
     {
-      nome: 'Fiscalização',
-      corPrimaria: '#57C278',
-      corSecundaria: '#D9F7E9'
+      nome: "Fiscalização",
+      corPrimaria: "#57C278",
+      corSecundaria: "#D9F7E9",
     },
 
     {
-      nome: 'Gestão de Numerário',
-      corPrimaria: '#FF8A29',
-      corSecundaria: '#FFEEDF'
-    }
-  ]
+      nome: "Gestão de Numerário",
+      corPrimaria: "#FF8A29",
+      corSecundaria: "#FFEEDF",
+    },
+  ];
 
   return (
     <>
@@ -32,8 +31,14 @@ function App() {
         <Banner />
         <FormOrgano />
 
-        {times.map(time => <Team key={time.nome} nome={time.nome} primaryColor={time.corPrimaria} secondaryColor={time.corSecundaria} />)}
-
+        {times.map((time) => (
+          <Team
+            key={time.nome}
+            nome={time.nome}
+            primaryColor={time.corPrimaria}
+            secondaryColor={time.corSecundaria}
+          />
+        ))}
       </div>
     </>
   );
