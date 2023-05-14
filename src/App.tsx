@@ -2,22 +2,17 @@ import { useState } from "react";
 import "./App.css";
 import Banner from "./components/banner/Banner";
 import FormOrgano from "./components/form/Form";
+import Team from "./components/team/team";
 
 function App() {
-
-  // const [colaboradores, setColaboradores] = useState([]);
-
-  // const incluirColaborador = (colaborador) => {
-  //   console.log(colaborador)
-  // }
 
   return (
     <>
       <div className="App">
         <Banner />
         <FormOrgano />
+        <Team />
       </div>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
     </>
   );
 }
