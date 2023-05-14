@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import "./App.css";
 import Banner from "./components/banner/Banner";
 import FormOrgano from "./components/form/Form";
@@ -26,7 +26,7 @@ function App() {
   ];
 
   return (
-    <>
+    <Fragment>
       <div className="App">
         <Banner />
         <FormOrgano />
@@ -40,7 +40,7 @@ function App() {
           />
         ))}
       </div>
-    </>
+    </Fragment>
   );
 }
 
