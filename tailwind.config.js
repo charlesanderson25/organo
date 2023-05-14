@@ -9,6 +9,8 @@ module.exports = {
       colors: {
         defaultBlue: '#6278f7',
         hoverButton: '#95FFd4',
+        corPrimariaECI: '#E06B69',
+        corSecundariaECI: '#FDE7E8',
       },
     },
   },

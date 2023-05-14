@@ -1,13 +1,15 @@
 
-const Team = () =>{
+interface PropsTeam{
+    nome: string;
+    primaryColor: string;
+    secondaryColor: string;
+}
 
-    const equipe = ["ECI", "Gestão de Numerário", "Fiscalização"];
+const Team = ({ nome, primaryColor, secondaryColor }: PropsTeam) =>{
 
     return (
-        <section>
-            <h3>{equipe[0]}</h3>
-            <h3>{equipe[1]}</h3>
-            <h3>{equipe[2]}</h3>
+        <section style={{ backgroundColor: secondaryColor }}>
+            <h3 style={{ borderColor: primaryColor }}>{nome}</h3>
         </section>
     )
 }
