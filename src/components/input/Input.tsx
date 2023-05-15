@@ -1,4 +1,4 @@
-import { ChangeEvent, useEffect, useState } from "react";
+import { ChangeEvent, useEffect, useState, } from "react";
 import "./input.css";
 
 interface InputFieldProps {
@@ -6,17 +6,17 @@ interface InputFieldProps {
   placeholder: string;
   required: boolean;
   value: string;
-  onChange: (value: string) => void;
+  onChange: (value: ChangeEvent<HTMLInputElement>) => void;
 }
 
 const InputField = ({ label, placeholder, required, value, onChange }: InputFieldProps) => {
   const [valueCaptured, setValueCaptured] = useState(value);
 
-  const catchValue = (eventoCaptura: ChangeEvent<HTMLInputElement>) => {
-    const newValue = eventoCaptura.target.value;
-    setValueCaptured(newValue);
-    onChange(newValue);
-  };
+  // const catchValue = (eventoCaptura: ChangeEvent<HTMLInputElement>) => {
+  //   const newValue = eventoCaptura.target.value;
+  //   setValueCaptured(newValue);
+  //   onChange(newValue);
+  // };
 
   // Atualizar a captura do catchValue, porque o 'set' do hook useState é uma função assíncrona 
   useEffect( () => {
@@ -27,8 +27,8 @@ const InputField = ({ label, placeholder, required, value, onChange }: InputFiel
     <div className="input-div">
       <label className="block my-4 text-2xl ">{label}</label>
       <input
-        value={valueCaptured}
-        onChange={catchValue}
+        value={value}
+        onChange={onChange}
         required={required}
         className="bg-white shadow-md w-full py-3 px-1"
         id="input"
