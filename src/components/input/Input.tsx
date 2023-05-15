@@ -4,15 +4,18 @@ import "./input.css";
 interface InputFieldProps {
   label: string;
   placeholder: string;
-  required: true;
+  required: boolean;
+  value: string;
+  onChange: (value: string) => void;
 }
 
-const InputField = ({ label, placeholder, required }: InputFieldProps) => {
-  const [valueCaptured, setValueCaptured] = useState("");
+const InputField = ({ label, placeholder, required, value, onChange }: InputFieldProps) => {
+  const [valueCaptured, setValueCaptured] = useState(value);
 
   const catchValue = (eventoCaptura: ChangeEvent<HTMLInputElement>) => {
-    setValueCaptured(eventoCaptura.target.value);
-    
+    const newValue = eventoCaptura.target.value;
+    setValueCaptured(newValue);
+    onChange(newValue);
   };
 
   // Atualizar a captura do catchValue, porque o 'set' do hook useState é uma função assíncrona 

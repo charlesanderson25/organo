@@ -1,4 +1,4 @@
-import { FormEvent } from "react";
+import { FormEvent, useState } from "react";
 import Button from "../button/Button";
 import DropDown from "../dropDown/DropDown";
 import InputField from "../input/Input";
@@ -7,8 +7,13 @@ import "./form.css";
 const FormOrgano = () => {
   const equipe = ["ECI", "Gestão de Numerário", "Fiscalização"];
 
+  const [nome, setNome] = useState("");
+  const [cargo, setCargo] = useState("");
+  const [imagem, setImagem] = useState("");
+
   const onClickSubmit = (eventoClique: FormEvent<HTMLFormElement>) => {
     eventoClique.preventDefault();
+    // Salvar os dados em um estado ou enviar para algum serviço
     alert("Seus dados foram enviados!");
   };
 
@@ -26,16 +31,23 @@ const FormOrgano = () => {
             required={true}
             label="Nome"
             placeholder="Digite Seu Nome"
+            value={nome}
+            onChange={(dataReceiptEvent) => setNome(dataReceiptEvent.target.value)}
           />
           <InputField
             required={true}
             label="Cargo"
             placeholder="Informe Seu Cargo"
+            value={cargo}
+            onChange={(dataReceiptEvent) => setCargo(dataReceiptEvent.target.value)}
+
           />
           <InputField
             required={true}
             label="Imagem"
             placeholder="Informe o Endereço da Imagem"
+            value={imagem}
+            onChange={(dataReceiptEvent) => setImagem(dataReceiptEvent.target.value)}
           />
           <DropDown item={equipe} label="Equipe" />
           <Button>Criar Card</Button>

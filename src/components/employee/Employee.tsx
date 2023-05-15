@@ -1,15 +1,22 @@
-const Employee = () => {
+interface PropsEmployee{
+  src: string;
+  alt: string;
+  nomeColaborador: string;
+  cargoColaborador: string;
+}
+
+const Employee = ({ src, alt, nomeColaborador, cargoColaborador }: PropsEmployee) => {
   return (
     <div>
       <div>
         <img
-          src="https://github.com/charlesanderson25.png"
-          alt="Charles Anderson Profile"
+          src={src}
+          alt={alt}
         />
       </div>
       <div>
-        <h4>Charles Anderson</h4>
-        <h5>Assessor I UT</h5>
+        <h4>{nomeColaborador}</h4>
+        <h5>{cargoColaborador}</h5>
       </div>
     </div>
   );

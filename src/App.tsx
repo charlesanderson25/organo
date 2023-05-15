@@ -2,7 +2,7 @@ import { Fragment, useState } from "react";
 import "./App.css";
 import Banner from "./components/banner/Banner";
 import FormOrgano from "./components/form/Form";
-import Team from "./components/team/team";
+import Team from "./components/team/Team";
 
 function App() {
   const times = [
