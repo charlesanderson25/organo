@@ -1,0 +1,27 @@
+{
+    "equipe": [
+        { 
+            "id": 1, 
+            "nomeEquipe": "ECI" 
+        },
+
+        { 
+            "id": 2, 
+            "nomeEquipe": "Fiscalização"  
+        },
+
+        {
+            "id": 3,
+            "nomeEquipe": "Gestão de Numerário"
+        }
+    ],
+
+    "colaborador": [
+        {
+            "nome": "Charles Anderson",
+            "cargo": "Assessor I UT",
+            "ímagem": "https://github.com/charlesanderson25.png",
+            "equipe": "ECI"
+        }
+    ]
+}
