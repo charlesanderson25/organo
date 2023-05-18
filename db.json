@@ -1,27 +1,48 @@
 {
-    "equipe": [
-        { 
-            "id": 1, 
-            "nomeEquipe": "ECI" 
-        },
-
-        { 
-            "id": 2, 
-            "nomeEquipe": "Fiscalização"  
-        },
-
-        {
-            "id": 3,
-            "nomeEquipe": "Gestão de Numerário"
-        }
-    ],
-
-    "colaborador": [
-        {
-            "nome": "Charles Anderson",
-            "cargo": "Assessor I UT",
-            "ímagem": "https://github.com/charlesanderson25.png",
-            "equipe": "ECI"
-        }
-    ]
+  "equipe": [
+    {
+      "id": 1,
+      "nomeEquipe": "ECI"
+    },
+    {
+      "id": 2,
+      "nomeEquipe": "Fiscalização"
+    },
+    {
+      "id": 3,
+      "nomeEquipe": "Gestão de Numerário"
+    }
+  ],
+  "colaborador": [
+    {
+      "nome": "Charles Anderson",
+      "cargo": "Assessor I UT",
+      "ímagem": "https://github.com/charlesanderson25.png",
+      "equipe": "ECI"
+    },
+    {
+      "id": 2,
+      "nome": "Paty",
+      "cargo": "Assessora",
+      "imagem": "www..."
+    },
+    {
+      "id": 3,
+      "nome": "Andre",
+      "cargo": "Assessor",
+      "imagem": "www...",
+      "equipe": [
+        "ECI",
+        "Gestão de Numerário",
+        "Fiscalização"
+      ]
+    },
+    {
+      "id": 4,
+      "nome": "Lucas",
+      "cargo": "Assessor",
+      "imagem": "www...",
+      "equipe": "Gestão de Numerário"
+    }
+  ]
 }

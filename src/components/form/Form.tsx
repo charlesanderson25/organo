@@ -1,25 +1,57 @@
-import { FormEvent, useState } from "react";
+import { FormEvent, useState, ChangeEvent } from "react";
 import Button from "../button/Button";
 import DropDown from "../dropDown/DropDown";
 import InputField from "../input/Input";
 import "./form.css";
+import axios from "axios";
+
 
 const FormOrgano = () => {
-  const equipe = ["ECI", "Gestão de Numerário", "Fiscalização"];
+  const equipes = ["ECI", "Gestão de Numerário", "Fiscalização"];
 
   const [nome, setNome] = useState("");
   const [cargo, setCargo] = useState("");
   const [imagem, setImagem] = useState("");
 
-  const onClickSubmit = (eventoClique: FormEvent<HTMLFormElement>) => {
+  const [equipe, setEquipe] = useState("");
+  
+  const handleSelect = (eventSelect: ChangeEvent<HTMLSelectElement>) => {
+    setEquipe(eventSelect.target.value);
+  }
+
+  const onClickSubmit = async(eventoClique: FormEvent<HTMLFormElement>) => {
     eventoClique.preventDefault();
-    // Salvar os dados em um estado ou enviar para algum serviço
     alert("Seus dados foram enviados!");
+
+    try{
+      const novoColaborador = {
+        id: 4,
+        nome: nome,
+        cargo: cargo,
+        imagem: imagem,
+        equipe: equipe,
+      };
+
+      // Salvar os dados em um estado ou enviar para algum serviço
+    
+      await axios.post('http://localhost:3000/colaborador', novoColaborador);
+
+      alert("Novo colaborador cadastrado com sucesso!");
+
+      // Limpar dados do formulário
+      setNome("");
+      setCargo("");
+      setImagem("");
+
+    }catch (error){
+      console.error(error);
+      alert("Erro ao cadastrar colaboradore, por favor, tente novamente!");
+    };
+    
+   
   };
 
-  try{
-    const response = await axios
-  }
+ 
 
   return (
     <section className="my-20 relative min-h-screen">
@@ -53,7 +85,7 @@ const FormOrgano = () => {
             value={imagem}
             onChange={(dataReceiptEvent) => setImagem(dataReceiptEvent.target.value)}
           />
-          <DropDown item={equipe} label="Equipe" />
+          <DropDown item={equipes} value={equipe} onChange={handleSelect} label="Equipe" />
           <Button>Criar Card</Button>
         </form>
       </div>
