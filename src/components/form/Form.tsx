@@ -4,6 +4,7 @@ import DropDown from "../dropDown/DropDown";
 import InputField from "../input/Input";
 import "./form.css";
 import axios from "axios";
+import { v4 as uuidv4 } from "uuid";
 
 
 const FormOrgano = () => {
@@ -25,7 +26,7 @@ const FormOrgano = () => {
 
     try{
       const novoColaborador = {
-        id: 4,
+        id: uuidv4(),
         nome: nome,
         cargo: cargo,
         imagem: imagem,
